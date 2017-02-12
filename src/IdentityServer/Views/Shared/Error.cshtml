@@ -1,0 +1,52 @@
+﻿<!--
+Project: IdentityServer
+File: Error.cshtml
+
+Copyright 2017 Mjollnir<mjollnir@59k.org>
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
+@model ErrorViewModel
+
+@{
+    var error = Model?.Error?.Error;
+    var request_id = Model?.Error?.RequestId;
+}
+
+<div class="error-page">
+    <div class="page-header">
+        <h1>Error</h1>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="alert alert-danger">
+                Sorry, there was an error
+
+                @if (error != null)
+                {
+                    <strong>
+                        <em>
+                            : @error
+                        </em>
+                    </strong>
+                }
+            </div>
+
+            @if (request_id != null)
+            {
+                <div class="request-id">Request Id: @request_id</div>
+            }
+        </div>
+    </div>
+</div>

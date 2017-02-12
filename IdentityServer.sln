@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{F487B3A2-0890-4D78-AD74-C39F381B9A58}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{072BEE03-C327-47E1-8A04-5527650F82BD}"
+	ProjectSection(SolutionItems) = preProject
+		global.json = global.json
+		LICENSE = LICENSE
+	EndProjectSection
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "IdentityServer", "src\IdentityServer\IdentityServer.xproj", "{CBF56E79-0E13-41D4-A77E-81988EBF329C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CBF56E79-0E13-41D4-A77E-81988EBF329C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBF56E79-0E13-41D4-A77E-81988EBF329C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBF56E79-0E13-41D4-A77E-81988EBF329C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBF56E79-0E13-41D4-A77E-81988EBF329C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{CBF56E79-0E13-41D4-A77E-81988EBF329C} = {F487B3A2-0890-4D78-AD74-C39F381B9A58}
+	EndGlobalSection
+EndGlobal
