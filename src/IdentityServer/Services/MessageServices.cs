@@ -14,6 +14,7 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,15 +27,24 @@ namespace IdentityServer.Services
     // For more details see this link http://go.microsoft.com/fwlink/?LinkID=532713
     public class AuthMessageSender : IEmailSender, ISmsSender
     {
+        private readonly ILogger<AuthMessageSender> _logger;
+
+        public AuthMessageSender(ILogger<AuthMessageSender> logger)
+        {
+            _logger = logger;
+        }
+
         public Task SendEmailAsync(string email, string subject, string message)
         {
             // Plug in your email service here to send an email.
+            _logger.LogInformation("Email: {email}, Subject: {subject}, Message: {message}", email, subject, message);
             return Task.FromResult(0);
         }
 
         public Task SendSmsAsync(string number, string message)
         {
             // Plug in your SMS service here to send a text message.
+            _logger.LogInformation("SMS: {number}, Message: {message}", number, message);
             return Task.FromResult(0);
         }
     }
