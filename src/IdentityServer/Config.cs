@@ -28,6 +28,7 @@ namespace IdentityServer
         {
             return new List<IdentityResource>
             {
+                new IdentityResources.Email(),
                 new IdentityResources.OpenId(),
                 new IdentityResources.Profile(),
             };
@@ -91,6 +92,7 @@ namespace IdentityServer
 
                     AllowedScopes =
                     {
+                        IdentityServerConstants.StandardScopes.Email,
                         IdentityServerConstants.StandardScopes.OpenId,
                         IdentityServerConstants.StandardScopes.Profile,
                         "api1"
