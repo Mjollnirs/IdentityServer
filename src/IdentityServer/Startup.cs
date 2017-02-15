@@ -120,6 +120,11 @@ namespace IdentityServer
 
             app.UseMvc(routes =>
             {
+                routes.MapAreaRoute(
+                    name: "Admin",
+                    areaName: "Admin",
+                    template: "Admin/{controller=Home}/{action=Index}/{id?}");
+
                 routes.MapRoute(
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
