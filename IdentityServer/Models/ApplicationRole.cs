@@ -1,5 +1,5 @@
 ﻿// Project: IdentityServer
-// File: HomeController.cs
+// File: ApplicationRole.cs
 // 
 // Copyright 2017 Mjollnir<mjollnir@59k.org>
 // 
@@ -14,16 +14,11 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Identity;
 
-namespace IdentityServer.Controllers
+namespace IdentityServer.Models
 {
-    public class HomeController : Controller
+    public class ApplicationRole : IdentityRole
     {
     }
 }
